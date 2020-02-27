@@ -66,7 +66,6 @@ class Application(tk.Frame):
     def update_gui(self, matrix):
         for x1, x2 in zip(self.entries, matrix):
             for y1, y2 in zip(x1, x2):
-                #y1['text'] = y2
                 y1.configure(text=y2)
                 self.master.update_idletasks()         
                 
