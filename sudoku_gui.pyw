@@ -25,8 +25,9 @@ class Application(tk.Frame):
             for y in x:
                 y.grid(row=self.entries.index(x), column=x.index(y))
                 
-        btn_run = tk.Button(self.master, text="Run", bg="green", width=5, command=self.run)
-        btn_run.grid(row=10, column=4)
+        self.run_btn = tk.Button(self.master, text="Run", bg="green", width=5, command=self.run)
+        self.run_btn.grid(row=10, column=4)
+
         
     
     def change_button_value_dialog(self, button_widget_coords):
@@ -71,10 +72,11 @@ class Application(tk.Frame):
                 
             
     def run(self):
+        self.run_btn['state'] = "disabled"
         sudoku.set_matrix(self.create_matrix())
         sudoku.subscribe_to_matrix_changes(self.update_gui)
         sudoku.solve_matrix(sudoku.get_matrix())
-
+        self.run_btn['state'] = "normal"
 
         
 
