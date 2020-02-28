@@ -1,3 +1,5 @@
+![Alt text](doc/screenshot_sudoku.png?raw=true "Screenshot of application")
+
 # sudoku_solver
 Sudoku solver to use with a python environment. 
 
