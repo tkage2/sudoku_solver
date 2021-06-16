@@ -22,6 +22,11 @@ cd sudoku_solver/
 python sudoku.py
 ```
 
+Note that this makes use of the default information located in the sudoku.csv file.
+
+## Program input
+The default program input is located in the sudoku.csv file. 
+
 ## Prerequisites
 1. Python >= 3.x.x installed
 
